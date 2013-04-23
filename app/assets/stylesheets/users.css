@@ -1,0 +1,10 @@
+.my_users_form {
+    background-color: pink;
+    display: inline-block;
+    width: 177px;
+    padding: 20px;
+}
+
+.my_users_submit_button {
+    margin-top: 10px;
+}

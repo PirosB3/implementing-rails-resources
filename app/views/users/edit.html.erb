@@ -1,7 +1,7 @@
-Editing user <%= @user.name %>
+<p>Editing user <%= @user.name %></p>
 
-<%= form_for(@user) do |f| %>
+<%= form_for(@user, :html => { :class => 'my_users_form' }) do |f| %>
     <%= f.text_field :name %>
     <%= f.password_field :password %>
-    <%= f.submit %>
+    <%= f.submit  :class => 'my_users_submit_button'  %>
 <% end %>
