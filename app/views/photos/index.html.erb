@@ -1,5 +1,5 @@
 <h1>Photos of <%= @user.name %></h1>
 
 <% @photos.each do |photo| %>
-    <%= @photo.title %>
+    <%= render :partial => 'photo_frame', :locals => { :photo => photo } %>
 <% end %>

@@ -20,4 +20,8 @@ class PhotosController < ApplicationController
         render :new
       end
   end
+
+  def show
+      @photo = Photo.find params[:id]
+  end
 end
