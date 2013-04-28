@@ -1,7 +1,15 @@
 <h1>Adding a new photo for user <%= @user.name %></h1>
 
+<% if @photo.errors.any? %>
+    <% @photo.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+    <% end %>
+<% end %>
+
 <%= form_for([@user, @photo]) do |f| %>
+    Title:
     <%= f.text_field :title %>
+    URL:
     <%= f.text_field :url %>
     <%= f.submit %>
 <% end %>
